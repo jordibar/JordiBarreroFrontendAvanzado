@@ -1,0 +1,17 @@
+.web-title {
+    background-color: $light-blue;
+    color: $baby-blue;
+    font-family: $title-font;
+    padding: 1em;
+}
+
+.main-nav {
+    background-color: $dark-brown;
+    color: $baby-blue;
+    font-family: $main-font;
+    padding: 5px;
+
+    li {
+        padding: 1em;
+    }
+}

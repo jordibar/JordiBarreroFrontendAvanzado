@@ -1,2 +1,10 @@
-// Reset css
 @import "reset";
+@import "variables";
+@import "html-tags";
+
+// Components
+@import "components/header";
+
+
+// Google fonts
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto');
