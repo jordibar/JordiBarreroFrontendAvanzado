@@ -16,7 +16,7 @@ var cssnano = require("cssnano");
 // Definimos la tarea por defecto
 //decimos donde tiene que buscar archivos sass, carpeta y subcarpetas
 //cuando hay cambios ejecuta la tarea 'sass'
-gulp.task("default", ["html", "sass", "js"], function() {
+gulp.task("default", ["img", "html", "sass", "js"], function() {
 
     //Iniciamos el servidor de desarrollo en la carpeta src
 //    browserSync.init({ proxy: "http://127.0.0.1:3100" });  // antes de instalar el servidor json-server tenía browserSync.init({ server: "dist/"});
@@ -34,7 +34,7 @@ gulp.task("default", ["html", "sass", "js"], function() {
 });
 
 
-//Definimos la tarea compliar sass
+//Definimos la tarea compilar sass
 gulp.task("sass", function(){    
     gulp.src("./src/scss/style.scss") //Indicamos el archivo fuente
         .pipe(sourcemaps.init()) // comienza a capturar los sourcemaps
@@ -48,6 +48,20 @@ gulp.task("sass", function(){
         .pipe(sourcemaps.write("./")) //guarda el sourcemap en la misma carpeta que el CSS
         .pipe(gulp.dest("dist/")) //guardamos el resultado en la carpeta dist
         .pipe(browserSync.stream()); //recarga el CSS del navegador
+
+        
+        
+        
+    gulp.src("./src/scss/font-awesome.scss") //Indicamos el archivo fuente
+        .pipe(sass().on("error", function(error){
+            return notify().write(error);//Si ocurre un error mostramos una notificación
+        })) //y le hacemos un pipe para pasarlo a la función que indicamos, también hacemos control de errores
+        .pipe(postcss([
+            autoprefixer(), //Transforma el CSS dándole compatibilidad a versiones antiguas
+            cssnano() // minifica el CSS
+        ]))
+        .pipe(gulp.dest("dist/")) //guardamos el resultado en la carpeta dist
+        .pipe(browserSync.stream()); //recarga el CSS del navegador
 });
 
 
@@ -58,6 +72,11 @@ gulp.task("html", function() {
         .pipe(gulpImport("src/components/")) //carpeta donde estaran los trozos de html que va a poder importar
         .pipe(htmlmin({collapseWhitespace: true})) // minifica el HTML
         .pipe(gulp.dest("dist/")) //carpeta donde deja las copias
+        .pipe(browserSync.stream()) // Recargamos el navegador
+
+
+    gulp.src("src/fonts/*.ttf src/fonts/*.woff src/fonts/*.woff2") //Coge todas las fuentes de la carpeta src/fonts
+        .pipe(gulp.dest("dist/fonts")) //carpeta donde deja las copias
         .pipe(browserSync.stream()) // Recargamos el navegador
 });
 
@@ -82,4 +101,23 @@ gulp.task("js", function() {
         .pipe(sourcemaps.write('./')) // guarda los sourcemaps en el mismo directorio que el archivo fuente
         .pipe(gulp.dest("dist/")) // lo guardamos en la carpeta dist
         .pipe(browserSync.stream()); // recargamos el navegador
+});
+
+// Tarea que optimiza y crea las imágenes responsive
+gulp.task("img", function() {
+
+// Paro esta tarea ya que no me funciona en windows!! También tenemos el require comentado!
+    gulp.src("src/img/*")        
+    /*    .pipe(responsive({ // Generamos las versiones responsive
+            '*': [
+                { width: 150, rename: { suffix: "-150px"}},
+                { width: 250, rename: { suffix: "-250px"}},
+                { width: 300, rename: { suffix: "-300px"}}
+            ]
+        }))
+        .pipe(imagemin()) // Optimizamos el peso de las imágenes
+    */
+        .pipe(gulp.dest("dist/img/")) // Carpeta donde se guardan las imágenes
+    
+
 });

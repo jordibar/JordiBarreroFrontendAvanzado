@@ -1,17 +1,62 @@
-.web-title {
+.web-title-container {
     background-color: $light-blue;
     color: $baby-blue;
+    display: flex;
+    justify-content: space-around;
     font-family: $title-font;
     padding: 1em;
+
+
+
+    .web-title, .searchInput {
+        align-self: center;
+    }
+
+    .searchInput {
+        display: flex;
+
+        form {
+            padding-left: 10px;
+        }
+    }
 }
+
+
 
 .main-nav {
     background-color: $dark-brown;
     color: $baby-blue;
     font-family: $main-font;
-    padding: 5px;
+    overflow: auto;
 
-    li {
-        padding: 1em;
+    .navbar-list {
+        list-style-type: none;
+
+        .active {
+                background-color: $dark-blue;
+            }
+
+        .navbar-list-item {
+            border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+            padding: 5px;
+            text-align: center;
+
+            &:hover {
+                    background-color: $dark-blue;
+                }
+
+            & a {
+                text-decoration: none;
+                color: $baby-blue;
+                width: 100%;                
+            }
+        }
     }
+}
+
+.mainImage {
+    background-image:  url("./img/mainImageSM.jpg");
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 265px;
 }
