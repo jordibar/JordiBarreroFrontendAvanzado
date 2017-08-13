@@ -21,7 +21,7 @@ gulp.task("default", ["img", "html", "sass", "js"], function() {
 
     //Iniciamos el servidor de desarrollo en la carpeta src
 //    browserSync.init({ proxy: "http://127.0.0.1:3100" });  // antes de instalar el servidor json-server tenía browserSync.init({ server: "dist/"});
-         browserSync.init({  server: "dist/" }); // en cuanto instalemos json-server se debe quitar esta línea.
+         browserSync.init({ proxy: "http://127.0.0.1:3100" });
 
     //Observa los cambios en los archivos SASS, y entonces ejecutamos la tarea 'sass'
     gulp.watch(["./src/scss/*.scss", "./src/scss/**/*.scss"], ["sass"]);

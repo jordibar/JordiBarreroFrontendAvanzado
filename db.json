@@ -1,0 +1,13 @@
+{
+    "articles" : [
+        {   "id": 1,
+            "title": "artículo 1",
+            "image":"https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+            "author": "Jordi Barrero",
+            "date": "miércoles",
+            "time": "10:30",
+            "like": "like",
+            "comments": "2"
+        }
+    ]
+}
