@@ -12,6 +12,7 @@ var uglify = require("gulp-uglify");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var cssnano = require("cssnano");
+var imagemin = require("gulp-imagemin");
 
 // Definimos la tarea por defecto
 //decimos donde tiene que buscar archivos sass, carpeta y subcarpetas
@@ -115,8 +116,8 @@ gulp.task("img", function() {
                 { width: 300, rename: { suffix: "-300px"}}
             ]
         }))
-        .pipe(imagemin()) // Optimizamos el peso de las imágenes
     */
+        .pipe(imagemin()) // Optimizamos el peso de las imágenes
         .pipe(gulp.dest("dist/img/")) // Carpeta donde se guardan las imágenes
     
 

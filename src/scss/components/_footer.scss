@@ -1,0 +1,15 @@
+.footerContainer {
+    background-color: $almost-black;
+    height: 4em;
+    color: $baby-blue;
+    display: flex;
+    justify-content: space-around;
+
+    & p, & i {
+        align-self: center;
+    }
+
+    & i {
+        font-size: 2em;
+    }
+}

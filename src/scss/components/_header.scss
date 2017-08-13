@@ -33,16 +33,16 @@
         list-style-type: none;
 
         .active {
-                background-color: $dark-blue;
+                border-bottom: 6px solid $dark-blue;
+                background-color: $dark-brown-active;
             }
 
         .navbar-list-item {
-            border-bottom: 1px solid rgba(128, 128, 128, 0.3);
             padding: 5px;
             text-align: center;
 
             &:hover {
-                    background-color: $dark-blue;
+                    background-color: $dark-brown-active;
                 }
 
             & a {
@@ -51,12 +51,100 @@
                 width: 100%;                
             }
         }
+
+
+
+        @include if-mobile-landscape {
+            display: flex;
+            justify-content: flex-start;
+
+            .navbar-list-item {
+                padding: 0.5em 0.5em;
+                border-right: 1px solid rgba(128, 128, 128, 0.3);
+                height: 3.5em;
+
+                &:last-child, &:nth-last-child(2){
+                    border-right: none;
+                    border-left: 1px solid rgba(128, 128, 128, 0.3);
+                }
+            }
+
+            .login-navbar-items {
+                width: 40%;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+
+        @include if-tablet-portrait {
+            .login-navbar-items {
+                width:70%;
+            }
+        }
+
+        @include if-tablet-landscape {
+            .login-navbar-items {
+                width:70%;
+            }
+        }
+
+        
     }
+
+
+    
 }
+
+
+
 
 .mainImage {
     background-image:  url("./img/mainImageSM.jpg");
     background-repeat: no-repeat;
     max-width: 100%;
     height: 265px;
+    
+    .cita {
+        color: $dark-blue;
+        padding: 2em 2em;
+
+
+        @include if-tablet-portrait {
+            font-size: 3em;
+        }
+        
+        @include if-tablet-landscape {
+            h2 {
+                font-size: 3em;
+            }
+            
+        }
+    }
+
+    @include if-mobile-landscape {
+        background-image: url("./img/mainImageM.jpg");
+        height: 200px;
+    }
+
+    @include if-tablet-portrait {
+        background-image: url("./img/mainImageXL.jpg");
+        height: 500px;
+    }
+
+    @include if-tablet-landscape {
+        background-image: url("./img/mainImageXL.jpg");
+        height: 500px;
+    }
+
+    @include if-panoramic-screen {
+        background-image: url("./img/mainImageXL.jpg");
+        margin: 0 auto;
+        max-width: 1280px;
+        margin-top: 3em;
+        margin-bottom: 3em;
+        border: 1px solid $dark-brown;
+        
+        
+    }
+
 }
