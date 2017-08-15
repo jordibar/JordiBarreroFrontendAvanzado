@@ -76,9 +76,18 @@ gulp.task("html", function() {
         .pipe(browserSync.stream()) // Recargamos el navegador
 
 
-    gulp.src("src/fonts/*.ttf src/fonts/*.woff src/fonts/*.woff2") //Coge todas las fuentes de la carpeta src/fonts
+    gulp.src("src/fonts/*.ttf") //Coge todas las fuentes de la carpeta src/fonts
         .pipe(gulp.dest("dist/fonts")) //carpeta donde deja las copias
         .pipe(browserSync.stream()) // Recargamos el navegador
+    
+    gulp.src("src/fonts/*.woff") //Coge todas las fuentes de la carpeta src/fonts
+        .pipe(gulp.dest("dist/fonts")) //carpeta donde deja las copias
+        .pipe(browserSync.stream()) // Recargamos el navegador
+    
+    gulp.src("src/fonts/*.woff2") //Coge todas las fuentes de la carpeta src/fonts
+        .pipe(gulp.dest("dist/fonts")) //carpeta donde deja las copias
+        .pipe(browserSync.stream()) // Recargamos el navegador
+
 });
 
 

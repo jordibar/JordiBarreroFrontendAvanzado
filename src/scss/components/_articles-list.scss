@@ -1,18 +1,19 @@
 .articles-list {
-    margin-top: 2em;
-    border: 1px solid $dark-brown;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
 
     .ui-state {
-        display:none;
+        display: none;
     }
     &.empty {
         .ui-state.empty {
-            display:block;
+            display: block;
         }
     }
     &.loading {
         .ui-state.loading {
-            display:block;
+            display: block;
         }
     }
     &.error {
@@ -23,7 +24,14 @@
     &.ideal {
         .ui-state.ideal {
             display: block;
+
+            @include if-mobile-landscape {
+            display: flex;
+            }
         }
+
+
+         
     }
 
     &.empty, &.loading, &.error {
@@ -31,4 +39,90 @@
         text-align: center;
         padding: 1em;
     }
+
+
+
+    .article {
+        border: 1px solid $dark-brown;
+        color: $almost-black;
+        padding: 1em;
+        //max-height: 250px;
+        margin: 1em;
+        height: 500px;
+        overflow: hidden;
+
+        @include if-mobile-landscape {
+            width: calc(100% * (1/ 2));
+            flex-grow: 1;
+        }
+
+        .imageArticle {
+            max-width: 100%;
+
+        }
+
+        .title {
+            font-family: $title-font;
+            font-weight: bold;
+            margin-top: 1em;
+            text-align: center;
+        }
+
+        .short_text {
+            margin-top: 10px;
+            color: $dark-brown;
+            font-family: $thin-text;
+        }
+
+        .author_info {
+            background-color: $baby-blue;
+            display: flex;
+            justify-content: flex-start;
+            max-height: 50px;
+            margin-top: 1em;
+            padding: 5px;
+
+            .author_photo {
+                max-width: 17%;
+                border-radius: 50%;
+                margin-right: 1em;
+            }
+
+            .author_name {
+                align-self: center;
+                color: $dark-blue;
+                font-size: $font-size-small;
+            }
+        }
+
+        .date_container {
+            background-color: $dark-blue;
+            display: flex;
+            font-size: $font-size-small;
+            padding: 10px;
+
+            .date {
+                margin-right: 5px;
+            }
+            .date, .time {
+                color: $baby-blue;
+            }
+        }
+
+        .others_container {
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+
+            button {
+                text-decoration: none;
+            }
+
+            .fa-heart-o, .fa-comment-o, .comments_number{
+                background-color: white;
+            }
+
+        }       
+    }
+   
 }
