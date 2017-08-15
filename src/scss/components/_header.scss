@@ -105,8 +105,17 @@
     height: 265px;
     
     .cita {
-        color: $dark-blue;
+        color: $baby-blue;
         padding: 2em 2em;
+        visibility: hidden;
+
+        
+        &.visibility {
+            transition: all 2s ease;
+            transition-delay: 1s;
+            visibility: visible;
+            color: $dark-blue;
+        }
 
 
         @include if-tablet-portrait {

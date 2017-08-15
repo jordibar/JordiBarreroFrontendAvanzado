@@ -1,6 +1,8 @@
 //Hace jQuery accesible públicamente
 window.$ = window.jQuery = require("jquery");
 
+import transitions from "./transitions";
+
 //Cargar la lista de articles con AJAX
 $.ajax ({
     url: "/articles/",
@@ -10,7 +12,7 @@ $.ajax ({
         //Comprovamos si hay artículos
         if(articles.length == 0) {
             //Mostramos el estado vacío
-            console.log("Estado vacío!");
+            $(".articles-list").removeClass("loading").addClass("empty");
         }else{
             //Componemos el HTML con todos los artículos
             let html = "";
@@ -22,15 +24,16 @@ $.ajax ({
             }
             
             // Metemos el HTML en el div que contiene los artículos
-            $(".articles-list").html(html);
+            $(".articles-list .ui-state.ideal").html(html);
 
             // Quitamos el mensaje de cargando y ponemos la clase ideal
-
+            $(".articles-list").remove("loading").addClass("ideal");
         }
     },
 
     error: error => {
         // Mostrar el estado de error
+        $("articles-list").removeClass("loading").addClass("error");
         console.log("ERROR", error);
     }
 });
