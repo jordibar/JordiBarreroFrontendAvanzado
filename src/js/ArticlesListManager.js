@@ -39,7 +39,7 @@ export default class ArticlesListManager extends UIManager {
                 }
         }, error => {
                 // Mostrar el estado de error
-                this.uiManager.setError();
+                this.setError();
                 console.log("ERROR", error);
         });
     }
@@ -90,7 +90,11 @@ export default class ArticlesListManager extends UIManager {
                     </div>
                     
                     <div class="comments">
-                        <button type="button" id="commentButton"><i class="comments_number">2 </i><i class="fa fa-comment-o" aria-hidden="true"></i></button>
+                        <button type="button" id="commentButton">
+                            <a href="../articulo.html">
+                                <i class="comments_number">2 </i><i class="fa fa-comment-o" aria-hidden="true"></i>
+                            </a>
+                        </button>
                     </div>
                 </article>`;
     }

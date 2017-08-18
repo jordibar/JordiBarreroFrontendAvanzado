@@ -116,5 +116,15 @@
             "like": "like",
             "comments": "2"
         }
+    ],
+
+
+    "comments" : [
+        {
+            "name": "jordi",
+            "surname": "Barrero",
+            "email": "jordibar@gmail.com",
+            "text": "bla bla bla bla..."
+        }
     ]
 }

@@ -1,0 +1,54 @@
+
+.comments-list {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
+
+    .ui-state {
+        display: none;
+    }
+    &.empty {
+        .ui-state.empty {
+            display: block;
+        }
+    }
+    &.loading {
+        .ui-state.loading {
+            display: block;
+        }
+    }
+    &.error {
+        .ui-state.error {
+            display: block;
+        }
+    }
+    &.ideal {
+        .ui-state.ideal {
+            display: block;
+
+            @include if-mobile-landscape {
+            display: flex;
+            flex-flow: row wrap; //it allows to appear on multiple rows, the default is nowrap.
+            position: relative;
+            }
+        }
+
+
+         
+    }
+
+    &.empty, &.loading, &.error {
+        display: block;
+        text-align: center;
+        padding: 1em;
+    }
+
+
+
+
+    .comment {
+        background-color: green;
+    }
+
+
+}

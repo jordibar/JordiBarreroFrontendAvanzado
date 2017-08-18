@@ -209,6 +209,18 @@
                 background-color: white;
             }
 
+            #commentButton a{
+                color: $almost-black;
+
+                & :hover {
+                    color: $almost-black;
+                }
+
+                & :visited {
+                    color: $almost-black;
+                }
+            }
+
         }       
     }
    

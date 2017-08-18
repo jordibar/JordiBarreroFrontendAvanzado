@@ -1,22 +1,26 @@
 const $ = require("jquery");
 
-let inicio = $("#inicio");
+let buttonUp = document.getElementById('goToInicio');
+buttonUp.addEventListener('click', scrollToElement);
 
-$("#goToInicio").on("click", scrollToElement(ini));
 
+function scrollToElement() {
+    let inicio = document.getElementById('ini');
 
-function scrollToElement(inicio) {
-    console.log(inicio.getBoundingClientRect());
-    var jump = parseInt(inicio.getBoundingClientRect().top * 0.3);
+    //Para saber cuantos px tenemos que saltar para llegar a la sección deseada
+    let jump = inicio.getBoundingClientRect().top * 1 / 3;
     
-
+    //Cambiamos la propiedad scrollTop
     document.body.scrollTop += jump;
 
     if (!inicio.lastJump || inicio.lastJump > Math.abs(jump)) {
         inicio.lastJump = Math.abs(jump);
 
+    //función recursiva
         setTimeout(function() {
             scrollToElement(inicio);
         }, 40);
-    }
+    }else{
+		inicio.lastJump = null;
+	}
 }
