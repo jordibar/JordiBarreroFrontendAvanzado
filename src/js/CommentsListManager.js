@@ -57,8 +57,7 @@ export default class CommentsListManager extends CommentsUIManager {
     renderComment(comment) {
         // Retorna el template string con el renderizado de un artículo
         return `<article class = "comment">
-                    <div class = "name">${comment.name}</div>
-                    <div class = "surname">${comment.surname}</div>
+                    <div class = "name">${comment.name} ${comment.surname}</div>
                     <div class = "email">${comment.email}</div>
                     <div class = "text">${comment.text}</div>
                 </article> `

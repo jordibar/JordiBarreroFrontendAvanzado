@@ -58,6 +58,5 @@ export default class CommentsUIManager {
 
     setIdealHtml(html) {
         this.element.find(".ui-state.ideal").html(html);
-        console.log(this);
     }
 }

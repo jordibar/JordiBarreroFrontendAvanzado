@@ -13,6 +13,8 @@ import ArticlesListManager from "./ArticlesListManager";
 import CommentsService from "./CommentsService";
 import CommentsUIManager from "./CommentsUIManager";
 import CommentsListManager from "./CommentsListManager";
+import CommentFormManager from "./CommentFormManager";
+
 
 // Sección artículos
 // Instanciamos ArticlesService (encargado de la conexión con el servidor)
@@ -30,5 +32,8 @@ const commentsService = new CommentsService("/comments/");
 // Instanciamos CommentsUIManager
 const commentsListUIManager = new CommentsUIManager();
 // Instanciamos CommentsListManager
-const commentsListManager = new CommentsListManager("comments-list", commentsService);
+const commentsListManager = new CommentsListManager(".comments-list", commentsService);
 commentsListManager.init();
+
+const commentFormManager = new CommentFormManager(".comment-form", commentsService);
+commentFormManager.init();

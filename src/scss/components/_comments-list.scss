@@ -47,7 +47,27 @@
 
 
     .comment {
-        background-color: green;
+        background-color: $baby-blue;
+        border: 0.5px solid $sky-blue;
+        color: $almost-black;
+        margin: 0 auto;
+        padding: 1em;
+        width: 90%;
+
+        .name {
+            color: $dark-blue;
+            text-align: right;
+            text-transform: uppercase;
+        }
+
+        .email {
+            text-align: right;
+            color: $dark-brown;
+        }
+
+        .text {
+            margin-top: 1em;
+        }
     }
 
 

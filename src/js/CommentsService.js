@@ -23,7 +23,13 @@ export default class CommentsService {
 
     // Crear un comentario
     create(comment, successCallback, errorCallback) {
-
+        $.ajax({
+            url: this.url,
+            method: "post",
+            data: comment,
+            success: successCallback,
+            error: errorCallback        
+        })
     }
 
 
@@ -35,7 +41,22 @@ export default class CommentsService {
 
     // Actualizar comentario
     update(comment, successCallback, errorCallback) {
+        $.ajax({
+            url: this.url,
+            method: "put",
+            data: comment,
+            success: successCallback,
+            error: errorCallback        
+        })
+    }
 
+    // Crear o actualizar comentario, si no existe la crea
+    save(comment, successCallback, errorCallback) {
+        if(comment.id) {
+            this.update(comment, successCallback, errorCallback);
+        }else{
+            this.create(comment, successCallback, errorCallback);
+        }
     }
 
 

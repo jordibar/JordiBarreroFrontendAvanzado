@@ -1,130 +1,175 @@
 {
-    "articles" : [
-        {   "id": 1,
-            "title": "Artículo 1",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
-            "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
-            "author": "Jordi Barrero",
-            "author_photo": "./img/JordiBarreroAlba.jpg",
-            "date": "miércoles",
-            "time": "10:30",
-            "like": "like",
-            "comments": "2"
-        },
-         {  "id": 2,
-            "title": "Artículo 2",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
-            "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
-            "author": "Carlos López",
-            "author_photo": "",
-            "date": "miércoles",
-            "time": "10:30",
-            "like": "like",
-            "comments": "2"
-        },
-         {  "id": 3,
-            "title": "Artículo 3",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
-            "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
-            "author": "Jordi Barrero",
-            "author_photo": "./img/JordiBarreroAlba.jpg",
-            "date": "miércoles",
-            "time": "10:30",
-            "like": "like",
-            "comments": "2"
-        },
-         {  "id": 4,
-            "title": "Artículo 4",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
-            "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
-            "author": "Jordi Barrero",
-            "author_photo": "./img/JordiBarreroAlba.jpg",
-            "date": "miércoles",
-            "time": "10:30",
-            "like": "like",
-            "comments": "2"
-        },
-        {
-            "id": 5,
-            "title": "Artículo 5",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
-            "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
-            "author": "Anotonio Martín",
-            "author_photo": "",
-            "date": "miércoles",
-            "time": "10:30",
-            "like": "like",
-            "comments": "2"
-        },
-        {
-            "id": 6,
-            "title": "Artículo 6",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
-            "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
-            "author": "Jordi Barrero",
-            "author_photo": "./img/JordiBarreroAlba.jpg",
-            "date": "miércoles",
-            "time": "10:30",
-            "like": "like",
-            "comments": "2"
-        },
-        {
-            "id": 7,
-            "title": "Artículo 7",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
-            "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
-            "author": "Jordi Barrero",
-            "author_photo": "./img/JordiBarreroAlba.jpg",
-            "date": "miércoles",
-            "time": "10:30",
-            "like": "like",
-            "comments": "2"
-        },
-        {
-            "id": 8,
-            "title": "Artículo 8",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
-            "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
-            "author": "Manolo García",
-            "author_photo": "",
-            "date": "miércoles",
-            "time": "10:30",
-            "like": "like",
-            "comments": "2"
-        },
-        {
-            "id": 9,
-            "title": "Artículo 9",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
-            "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
-            "author": "Jordi Barrero",
-            "author_photo": "./img/JordiBarreroAlba.jpg",
-            "date": "miércoles",
-            "time": "10:30",
-            "like": "like",
-            "comments": "2"
-        },
-        {
-            "id": 10,
-            "title": "Artículo 10",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
-            "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
-            "author": "Jordi Barrero",
-            "author_photo": "./img/JordiBarreroAlba.jpg",
-            "date": "miércoles",
-            "time": "10:30",
-            "like": "like",
-            "comments": "2"
-        }
-    ],
-
-
-    "comments" : [
-        {
-            "name": "jordi",
-            "surname": "Barrero",
-            "email": "jordibar@gmail.com",
-            "text": "bla bla bla bla..."
-        }
-    ]
+  "articles": [
+    {
+      "id": 1,
+      "title": "Artículo 1",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
+      "author": "Jordi Barrero",
+      "author_photo": "./img/JordiBarreroAlba.jpg",
+      "date": "miércoles",
+      "time": "10:30",
+      "like": "like",
+      "comments": "2"
+    },
+    {
+      "id": 2,
+      "title": "Artículo 2",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
+      "author": "Carlos López",
+      "author_photo": "",
+      "date": "miércoles",
+      "time": "10:30",
+      "like": "like",
+      "comments": "2"
+    },
+    {
+      "id": 3,
+      "title": "Artículo 3",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
+      "author": "Jordi Barrero",
+      "author_photo": "./img/JordiBarreroAlba.jpg",
+      "date": "miércoles",
+      "time": "10:30",
+      "like": "like",
+      "comments": "2"
+    },
+    {
+      "id": 4,
+      "title": "Artículo 4",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
+      "author": "Jordi Barrero",
+      "author_photo": "./img/JordiBarreroAlba.jpg",
+      "date": "miércoles",
+      "time": "10:30",
+      "like": "like",
+      "comments": "2"
+    },
+    {
+      "id": 5,
+      "title": "Artículo 5",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
+      "author": "Anotonio Martín",
+      "author_photo": "",
+      "date": "miércoles",
+      "time": "10:30",
+      "like": "like",
+      "comments": "2"
+    },
+    {
+      "id": 6,
+      "title": "Artículo 6",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
+      "author": "Jordi Barrero",
+      "author_photo": "./img/JordiBarreroAlba.jpg",
+      "date": "miércoles",
+      "time": "10:30",
+      "like": "like",
+      "comments": "2"
+    },
+    {
+      "id": 7,
+      "title": "Artículo 7",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
+      "author": "Jordi Barrero",
+      "author_photo": "./img/JordiBarreroAlba.jpg",
+      "date": "miércoles",
+      "time": "10:30",
+      "like": "like",
+      "comments": "2"
+    },
+    {
+      "id": 8,
+      "title": "Artículo 8",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
+      "author": "Manolo García",
+      "author_photo": "",
+      "date": "miércoles",
+      "time": "10:30",
+      "like": "like",
+      "comments": "2"
+    },
+    {
+      "id": 9,
+      "title": "Artículo 9",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
+      "author": "Jordi Barrero",
+      "author_photo": "./img/JordiBarreroAlba.jpg",
+      "date": "miércoles",
+      "time": "10:30",
+      "like": "like",
+      "comments": "2"
+    },
+    {
+      "id": 10,
+      "title": "Artículo 10",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
+      "author": "Jordi Barrero",
+      "author_photo": "./img/JordiBarreroAlba.jpg",
+      "date": "miércoles",
+      "time": "10:30",
+      "like": "like",
+      "comments": "2"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "name": "jordi",
+      "surname": "Barrero",
+      "email": "jordibar@gmail.com",
+      "text": "bla bla bla bla..."
+    },
+    {
+      "name": "pepe",
+      "surname": "palotes",
+      "email": "jordia aldkfj ",
+      "text": "comentario de pepe palotes",
+      "id": 2
+    },
+    {
+      "name": "Maria",
+      "surname": "Pena",
+      "email": "mariapena@gmail.com",
+      "text": "Este es el comentario de Maria Pena todo en mayúsculas! se tiene que cambiar!",
+      "id": 3
+    },
+    {
+      "name": "Camping",
+      "surname": "Ilbarritz",
+      "email": "camping@gmail.com",
+      "text": "jfjfjf fjfjfjf jfjfjf",
+      "id": 4
+    },
+    {
+      "name": "adsfadf",
+      "surname": "adsfadfs",
+      "email": "adsfadfs@gmail.com",
+      "text": "asdfadsf adsfasdf asdfadfs",
+      "id": 5
+    },
+    {
+      "name": "ara si",
+      "surname": "ara si de veritat",
+      "email": "si@gmai.ocm",
+      "text": "asdfdf adsfdf adsfdf",
+      "id": 6
+    },
+    {
+      "name": "siiii",
+      "surname": "segur",
+      "email": "segur@gmail.com",
+      "text": "SIIIIIIIIIIIII!!!!!!!!!!",
+      "id": 7
+    }
+  ]
 }

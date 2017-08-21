@@ -1,0 +1,35 @@
+<form novalidate class="comment-form">
+
+    <div class="ui-status error">
+        Se ha producido un error
+    </div>
+
+    <div class="ui-status loading">
+        Guardando comentario...
+    </div>
+    
+    <div class="ui-status ideal">
+        <div class="form-control-group">
+            <label for="name">Nombre: </label>
+            <input type="text" id="name" placeholder="Nombre" required>
+        </div>
+
+        <div class="form-control-group">
+            <label for="surname">Apellido: </label>
+            <input type="text" id="surname" placeholder="Apellido" required>
+        </div>
+
+        <div class="form-control-group">
+            <label for="email">Email: </label>
+            <input type="email" id="email" placeholder="Email" required>
+        </div>
+
+        <div class="form-control-group">
+            <label for="text">Comentario: </label>
+            <input type="textarea" id="text" placeholder="Aquí tu comentario" required>
+        </div>
+        <div class="from-control-group">
+            <button id="enviar">Enviar</button>
+        </div>
+    </div>    
+</form>
