@@ -209,6 +209,16 @@
                 background-color: white;
             }
 
+            .liked {
+                transition: color 0.5s;
+                color: $deep-pink;
+            }
+
+            .noLiked {
+                transition: color 0.5s;
+                color: $almost-black;
+            }
+
             #commentButton a{
                 color: $almost-black;
 

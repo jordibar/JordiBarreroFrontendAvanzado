@@ -52,26 +52,38 @@ export default class CommentFormManager extends CommentsUIManager {
 
         // Validamos campo por campo
         if(inputName.checkValidity() === false) {
-            alert("Escribe tu nombre");
+            //alert("Escribe tu nombre");
+            const errorMessage = inputName.validationMessage;
             inputName.focus();
+            this.setErrorHtml(errorMessage);
+            this.setErrorForm(); // Nos ponemos en estado de errorForm
             return false;
         }
 
         if(inputSurname.checkValidity() === false) {
-            alert("Escribe tu apellido");
+            //alert("Escribe tu apellido");
+            const errorMessage = inputSurname.validationMessage;
             inputSurname.focus();
+            this.setErrorHtml(errorMessage);
+            this.setErrorForm(); // Nos ponemos en estado de errorForm
             return false;
         }
 
         if(inputEmail.checkValidity() === false) {
-            alert("Escribe una dirección de correo correcta");
+            //alert("Escribe una dirección de correo correcta");
+            const errorMessage = inputEmail.validationMessage;
             inputEmail.focus();
+            this.setErrorHtml(errorMessage);
+            this.setErrorForm(); // Nos ponemos en estado de errorForm
             return false;
         }
 
         if(inputText.checkValidity() === false) {
-            alert("Escribe un texto");
-            inputName.focus();
+            //alert("Escribe un texto");
+            const errorMessage = inputText.validationMessage;
+            inputText.focus();
+            this.setErrorHtml(errorMessage);
+            this.setErrorForm(); // Nos ponemos en estado de errorForm
             return false;
         }
         
@@ -86,10 +98,10 @@ export default class CommentFormManager extends CommentsUIManager {
     }
 
 
-    // Limitar el textarea a 150 palabras
+    // Limitar el textarea a 120 palabras
     checkWordLimit(inputTexts) {
         this.inputTextCheck = inputTexts;
-        let wordsLimit = 150;
+        let wordsLimit = 120;
         let wordCount = {};
 
         wordCount = this.inputTextCheck.value.split(" ").length;

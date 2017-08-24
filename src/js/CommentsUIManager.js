@@ -24,6 +24,10 @@ export default class CommentsUIManager {
         this.element.removeClass(this.uiStateClasses).addClass("error");
     }
 
+    setErrorForm() {
+        this.element.removeClass(this.uiStateClasses).addClass("error ideal");
+    }
+
     setPartial() {
         this.element.removeClass(this.uiStateClasses).addClass("partial");
     }
@@ -50,6 +54,7 @@ export default class CommentsUIManager {
 
     setErrorHtml(html) {
         this.element.find(".ui-state.error").html(html);
+        console.log("setErrorHtml: " +this.element.find(".ui-state.error"));
     }
 
     setPartialHtml(html) {

@@ -1,73 +1,78 @@
 .comment-form {
-    padding: 1em;
-    border: 1px solid $dark-brown-active;
-    width: 90%;
-    margin: 1em auto;
-    overflow: auto;
 
-    button {
-        @extend input; // Hereda todas las normas del input
-        background-color: $dark-blue;
-        color: $light-blue;
-        font-weight: bold;
-        transition: all 0.25s;
-        float: right;
-        &:active {
-            background: lighten($dark-blue, 25%);
-        }
+    .ui-state {
+        display:none;
 
+        padding: 1em;
+        border: 1px solid $dark-brown-active;
+        width: 90%;
+        margin: 1em auto;
+        overflow: auto;
     }
-
-
-    label, input {
-        font-size: $font-size-base;
-        font-weight: bold;
-    }
-
-    input {
-        margin: 5px 0 5px 0;
-        padding: 10px;
-        border-radius: 5px;
-
-        &:focus {
-            outline-color: $dark-blue;
+    &.loading {
+        .ui-state.loading {
+            display: block;
+            color: $brown;
+            text-align: center;
+            margin-bottom: 10px;
         }
     }
+    &.error {
+        .ui-state.error {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            color: $brown;
+            margin-bottom: 10px;
+        }
+    }
+    &.ideal {
+        .ui-state.ideal {
+            display: block;
 
-        .ui-status {
-            &.error {
-                text-align: center;
-                background-color: $light-blue;
+
+            label, input {
+                font-size: $font-size-base;
+                font-weight: bold;
+            }
+
+            input {
+                margin: 5px 0 5px 0;
                 padding: 10px;
                 border-radius: 5px;
-                color: $ligth-brown;
-                margin-bottom: 10px;
-                display: none;
+
+                &:focus {
+                    outline-color: $dark-blue;
+                }
             }
 
-            &.loading {
-                text-align: center;
-                margin-bottom: 10px;
-                display: none;
+            button {
+                @extend input; // Hereda todas las normas del input
+                background-color: $dark-blue;
+                color: $light-blue;
+                font-weight: bold;
+                transition: all 0.25s;
+                float: right;
+                &:active {
+                    background: lighten($dark-blue, 25%);
+                }
             }
 
-            &.error .ui-status.error {
-                display: block;
+            @include if-tablet-landscape {
+                .form-control-group {
+                    display: inline-block;
+                    padding: 0 5px;
+                    width: 50%;
+                }
+            }
+            @include if-tablet-portrait {
+                .form-control-group {
+                        display: inline-block;
+                        padding: 0 5px;
+                        width: 50%;
+                }
             }
         }
-
-        @include if-tablet-landscape {
-            .form-control-group {
-                display: inline-block;
-                padding: 0 5px;
-                width: 50%;
-            }
-        }
-        @include if-tablet-portrait {
-        .form-control-group {
-                display: inline-block;
-                padding: 0 5px;
-                width: 50%;
-            }
-        }
+    }
 }
