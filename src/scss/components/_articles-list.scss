@@ -144,6 +144,25 @@
             font-family: $thin-text;
         }
 
+        .seguir_leyendo {
+            text-align: center;
+            margin-top: 10px;
+
+            a{
+                color: $dark-blue;
+                font-size: $font-size-small;
+                text-decoration: none;
+
+                transition: color 0.5s ease;
+
+                &:hover {
+                    color: $brown;   
+                }
+            }
+            
+
+        }
+
         .author_info {
             background-color: $baby-blue;
             display: flex;

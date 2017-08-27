@@ -3,7 +3,6 @@ window.$ = window.jQuery = require("jquery");
 
 import transitions from "./transitions";
 import smoothScroll from "./smoothScroll";
-import likeFunctionality from "./likeFunctionality";
 
 //Sección artículos
 import ArticlesService from "./ArticlesService";

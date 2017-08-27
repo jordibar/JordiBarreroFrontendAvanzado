@@ -1,0 +1,61 @@
+.articleMainImage {
+    @extend .mainImage;
+    background-image:  url("./img/articleMainImageSM.jpg");
+    
+    .cita {
+        color: white !important;
+    }
+
+    @include if-mobile-landscape {
+        background-image:  url("./img/articleMainImageM.jpg");
+    }
+
+    @include if-tablet-portrait {
+        background-image:  url("./img/articleMainImageSM.jpg");
+    }
+
+     @include if-tablet-landscape {
+        background-image: url("./img/articleMainImageXL.jpg");
+    }
+
+    @include if-panoramic-screen {
+        background-image: url("./img/articleMainImageXL.jpg");
+    }
+
+
+}
+
+.content {
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    @include if-panoramic-screen {
+        margin: 0 auto;
+        max-width: 1300px;
+    }
+
+    .articleContent {
+        padding: 0 1em;
+
+        p {
+            color: $almost-black;
+            margin-bottom: 1em;
+
+            &:last-child {
+                padding-bottom: 3em;
+            }
+
+            a {
+                color: $dark-blue;
+                font-weight: bold;
+                text-decoration: none;
+
+                transition: color 0.5s ease;
+
+                &:hover {
+                    color: $brown;   
+                }
+            }
+        }
+    }
+}

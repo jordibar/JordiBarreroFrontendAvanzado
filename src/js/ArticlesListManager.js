@@ -100,6 +100,8 @@ export default class ArticlesListManager extends UIManager {
 
                     <div class="short_text">${article.short_text}</div>
 
+                    <div class="seguir_leyendo"><a href="./articulo.html">Seguir leyendo...</a></div>
+
                     <div class="author_info">
                         <img src="${author_photo}" alt="foto" class="author_photo">
                         <div class="author_name">${article.author}</div>
@@ -126,7 +128,7 @@ export default class ArticlesListManager extends UIManager {
                 </article>`;
     }
   
-
+/* Like Functionality________________________________*/
 
     checkLike(article) {
         let idArticle = String(article);
@@ -167,4 +169,12 @@ export default class ArticlesListManager extends UIManager {
         art.find('.fa-heart-o').removeClass('liked').addClass('noLiked');
         
     }
+
+
+/* Date functionality_____________________________*/
+    checkDate() {
+        const actualDate = new Date();
+    }
+
+
 }
