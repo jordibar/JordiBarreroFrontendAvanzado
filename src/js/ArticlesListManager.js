@@ -95,7 +95,7 @@ export default class ArticlesListManager extends UIManager {
 
 
         // Calcular el tiempo desde la publicación del artículo
-        this.calculateTime(article.date);
+        let elapsedTimeDate = this.calculateTime(article.date);
         
         
 
@@ -114,8 +114,7 @@ export default class ArticlesListManager extends UIManager {
                     </div>
 
                     <div class="date_container">
-                        <div class="date">Publicado: ${article.date}</div>
-                        <div class="time">${article.time}h</div>
+                        <div class="date">Publicado: ${elapsedTimeDate}</div>
                     </div>
 
                     <div class="others_container">
@@ -180,7 +179,8 @@ export default class ArticlesListManager extends UIManager {
 /* Date functionality_____________________________*/
     calculateTime(date) {
         // Constantes para calcular los valores en milisegundos
-        const msecPerMinute = 1000 * 60;
+        const msecPerSeconds = 1000;
+        const msecPerMinute = msecPerSeconds * 60;
         const msecPerHour = msecPerMinute * 60;
         const msecPerDay = msecPerHour * 24;
 
@@ -194,14 +194,43 @@ export default class ArticlesListManager extends UIManager {
         const publishedDateMsec = publishedDate.getTime();
         const actualDateMsec = actualDate.getTime();
 
-        var interval = actualDateMsec - publishedDateMsec;
+        var interval =  publishedDateMsec - actualDateMsec;
 
-        // Calculamos los minutos
+        // Calculamos los diferentes intervalos
+        let seconds = Math.floor(interval / msecPerSeconds);
+        let minutes = Math.floor(interval / msecPerMinute);
+        let hours = Math.floor(interval / msecPerHour);
         let days = Math.floor(interval / msecPerDay);
 
-        console.log(publishedDateMsec);
-        console.log(actualDateMsec);
-        console.log(days);
+        // Días de la semana
+        var diaSemana = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+
+        let elapsedTime;
+
+        if(seconds < 59) {
+            elapsedTime = 'hace '+seconds + ' segundos';
+            return elapsedTime;
+        }else if(seconds > 59 && minutes < 59) {
+            elapsedTime = 'hace '+minutes + ' minutos'
+            return elapsedTime;          
+        } else if(minutes > 59 && hours < 23){
+            elapsedTime = 'hace '+hours + ' horas';
+            return elapsedTime;
+        }else if(hours > 23 && days < 6) {
+            let weekDay = diaSemana[publishedDate.getDay()];
+            elapsedTime = 'el '+weekDay;
+            return elapsedTime;
+        }else{
+            let dateDay = publishedDate.getDate();
+            let dateMonth = publishedDate.getMonth();
+            let dateYear = publishedDate.getFullYear();
+            let dateHours = publishedDate.getHours();
+            let dateMinutes = (publishedDate.getMinutes()<10?'0':'') + publishedDate.getMinutes();
+
+
+            elapsedTime = `el ${dateDay}-${dateMonth}-${dateYear} a las ${dateHours}:${dateMinutes}`;
+            return elapsedTime;
+        }
     }
 
 
