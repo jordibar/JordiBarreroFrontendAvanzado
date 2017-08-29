@@ -124,7 +124,7 @@ export default class ArticlesListManager extends UIManager {
                     
                         <div class="comments">
                             <button type="button" id="commentButton">
-                                <a href="../articulo.html">
+                                <a href="../articulo.html#commentsSection">
                                     <i class="comments_number">2 </i><i class="fa fa-comment-o" aria-hidden="true"></i>
                                 </a>
                             </button>

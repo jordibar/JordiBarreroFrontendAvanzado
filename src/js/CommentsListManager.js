@@ -15,7 +15,15 @@ export default class CommentsListManager extends CommentsUIManager {
 
     init() {
         // Cargamos los comentarios
-        this.loadComments();
+        // this.loadComments();
+
+        let self = this;
+
+        $(window).scroll(function() {
+            if($(window).scrollTop() == $(document).height() - $(window).height()) {
+                self.loadComments();
+            }
+        });
     }
 
 
