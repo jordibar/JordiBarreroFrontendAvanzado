@@ -23,7 +23,7 @@ export default class ArticlesListManager extends UIManager {
 
         let self = this;
 
-        //Manejador de eventos, al hacer clic borramos la cacnión
+        //Manejador de eventos, al hacer clic en el botón activamos o desactivamos "me gusta"
         this.element.on("click", ".fa-heart-o", function() {
             //Con jQuery accedemos a los atributos data para saber el id
             let parentObject = this.parentNode.parentNode.parentNode.parentNode;
@@ -78,6 +78,7 @@ export default class ArticlesListManager extends UIManager {
             author_photo = "./img/head.png";
         }
 
+
         // Local Storage
         if (typeof(Storage) !== "undefined") {
             var likeChecked;
@@ -91,6 +92,11 @@ export default class ArticlesListManager extends UIManager {
         }else{
             alert("Tu navegador no soporta Web Storage, puede que algunas funcionalidades no funcionen correctamente.");
         }
+
+
+        // Calcular el tiempo desde la publicación del artículo
+        this.calculateTime(article.date);
+        
         
 
         // Retorna el template string con el renderizado de un artículo
@@ -172,8 +178,30 @@ export default class ArticlesListManager extends UIManager {
 
 
 /* Date functionality_____________________________*/
-    checkDate() {
-        const actualDate = new Date();
+    calculateTime(date) {
+        // Constantes para calcular los valores en milisegundos
+        const msecPerMinute = 1000 * 60;
+        const msecPerHour = msecPerMinute * 60;
+        const msecPerDay = msecPerHour * 24;
+
+
+        // Fechas con las que trabajamos 
+        this.date = date;
+        const publishedDate = new Date(this.date);
+        const actualDate = new Date('2017-08-29T10:05:00Z');
+
+        // Pasamos las fechas a milisegundos
+        const publishedDateMsec = publishedDate.getTime();
+        const actualDateMsec = actualDate.getTime();
+
+        var interval = actualDateMsec - publishedDateMsec;
+
+        // Calculamos los minutos
+        let days = Math.floor(interval / msecPerDay);
+
+        console.log(publishedDateMsec);
+        console.log(actualDateMsec);
+        console.log(days);
     }
 
 
