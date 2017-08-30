@@ -11,7 +11,7 @@
     }
 
     @include if-tablet-portrait {
-        background-image:  url("./img/articleMainImageSM.jpg");
+        background-image:  url("./img/articleMainImageXL.jpg");
     }
 
      @include if-tablet-landscape {

@@ -148,7 +148,7 @@ export default class CommentFormManager extends CommentsUIManager {
     }
 
     enableFormControls() {
-        this.element.find("input, button").attr("disabled", true);
+        this.element.find("input, button").attr("disabled", false);
     }
 
     // Redefinimos los métodos del padre CommentsUIManager

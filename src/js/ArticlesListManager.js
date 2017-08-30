@@ -77,6 +77,17 @@ export default class ArticlesListManager extends UIManager {
         if (author_photo == "") {
             author_photo = "./img/head.png";
         }
+        
+
+          // video o imagen
+          let imageCode;
+          
+                  if (article.image != "") {
+                      imageCode = `<img src="${article.image}XL.jpg" alt="${article.title} - ${article.author}" class="imageArticle" srcset="${article.image}XL.jpg 550w, ${article.image}M.jpg 4000w" >`;
+                  }else{
+                      imageCode =  `<video controls src="./video/video.mp4" type="video/mp4"></video>`;
+                  }
+
 
 
         // Local Storage
@@ -101,8 +112,9 @@ export default class ArticlesListManager extends UIManager {
 
         // Retorna el template string con el renderizado de un artículo
         return `<article class = "article" data-id="${article.id}">
-                    <img src="${article.image}SM.jpg" alt="${article.title} - ${article.author}" class="imageArticle" srcset="${article.image}SM.jpg 768w, ${article.image}M.jpg 1024w, ${article.image}XL.jpg 400w" >
-                    <video><source="${article.video}" type="video/mp4></video>
+                    <div class="imageVideo">
+                        ${imageCode}
+                    </div>                    
                     <div class="title">${article.title}</div>
 
                     <div class="short_text">${article.short_text}</div>
