@@ -17,7 +17,7 @@ var imagemin = require("gulp-imagemin");
 // Definimos la tarea por defecto
 //decimos donde tiene que buscar archivos sass, carpeta y subcarpetas
 //cuando hay cambios ejecuta la tarea 'sass'
-gulp.task("default", ["img", "html", "sass", "js"], function() {
+gulp.task("default", ["video", "img", "html", "sass", "js"], function() {
 
     //Iniciamos el servidor de desarrollo en la carpeta src
 //    browserSync.init({ proxy: "http://127.0.0.1:3100" });  // antes de instalar el servidor json-server tenía browserSync.init({ server: "dist/"});
@@ -128,6 +128,10 @@ gulp.task("img", function() {
     */
         .pipe(imagemin()) // Optimizamos el peso de las imágenes
         .pipe(gulp.dest("dist/img/")) // Carpeta donde se guardan las imágenes
-    
+});
 
+// Tarea copia carpeta video
+gulp.task("video", function() {
+    gulp.src("src/video/*")        
+        .pipe(gulp.dest("dist/video/")) // Carpeta donde se guardan los videos
 });

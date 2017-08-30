@@ -101,7 +101,8 @@ export default class ArticlesListManager extends UIManager {
 
         // Retorna el template string con el renderizado de un artículo
         return `<article class = "article" data-id="${article.id}">
-                    <img src="${article.image}" alt="${article.title} - ${article.author}" class="imageArticle">
+                    <img src="${article.image}SM.jpg" alt="${article.title} - ${article.author}" class="imageArticle" srcset="${article.image}SM.jpg 768w, ${article.image}M.jpg 1024w, ${article.image}XL.jpg 400w" >
+                    <video><source="${article.video}" type="video/mp4></video>
                     <div class="title">${article.title}</div>
 
                     <div class="short_text">${article.short_text}</div>

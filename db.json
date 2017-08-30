@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Artículo 1",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "image": "./img/articleImg1",
       "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
       "author": "Jordi Barrero",
       "author_photo": "./img/JordiBarreroAlba.jpg",
@@ -14,7 +14,7 @@
     {
       "id": 2,
       "title": "Artículo 2",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "image": "./img/articleImg2",
       "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
       "author": "Carlos López",
       "author_photo": "",
@@ -25,7 +25,7 @@
     {
       "id": 3,
       "title": "Artículo 3",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "image": "./img/articleImg3",
       "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
       "author": "Jordi Barrero",
       "author_photo": "./img/JordiBarreroAlba.jpg",
@@ -36,7 +36,7 @@
     {
       "id": 4,
       "title": "Artículo 4",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "image": "./img/articleImg4",
       "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
       "author": "Jordi Barrero",
       "author_photo": "./img/JordiBarreroAlba.jpg",
@@ -47,7 +47,7 @@
     {
       "id": 5,
       "title": "Artículo 5",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "image": "./img/articleImg5",
       "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
       "author": "Anotonio Martín",
       "author_photo": "",
@@ -58,7 +58,7 @@
     {
       "id": 6,
       "title": "Artículo 6",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "image": "./img/articleImg6",
       "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
       "author": "Jordi Barrero",
       "author_photo": "./img/JordiBarreroAlba.jpg",
@@ -69,7 +69,7 @@
     {
       "id": 7,
       "title": "Artículo 7",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "image": "./img/articleImg7",
       "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
       "author": "Jordi Barrero",
       "author_photo": "./img/JordiBarreroAlba.jpg",
@@ -80,7 +80,7 @@
     {
       "id": 8,
       "title": "Artículo 8",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "image": "./img/articleImg8",
       "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
       "author": "Manolo García",
       "author_photo": "",
@@ -91,7 +91,7 @@
     {
       "id": 9,
       "title": "Artículo 9",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "image": "./img/articleImg9",
       "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
       "author": "Jordi Barrero",
       "author_photo": "./img/JordiBarreroAlba.jpg",
@@ -102,7 +102,8 @@
     {
       "id": 10,
       "title": "Artículo 10",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/81eIMvbLnfL._SL1500_.jpg",
+      "image": "",
+      "video":"./video/video.mp4",
       "short_text": "Lore ipsum dfkjdkfj asdjfoei eieuroi faoi dfiou oiu fa oiufd oiadfu oiudfoidfus oasfdi foiad f",
       "author": "Jordi Barrero",
       "author_photo": "./img/JordiBarreroAlba.jpg",
