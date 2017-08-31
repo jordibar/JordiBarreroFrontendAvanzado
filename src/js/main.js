@@ -1,6 +1,9 @@
 //Hace jQuery accesible públicamente
 window.$ = window.jQuery = require("jquery");
 
+import "babel-polyfill";
+
+
 import transitions from "./transitions";
 import smoothScroll from "./smoothScroll";
 
